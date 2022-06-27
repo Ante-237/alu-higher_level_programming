@@ -3,3 +3,4 @@
 6 -> play with strings
 7 -> copy-cut-paste
 8 -> Creating a new Sentence
+9 -> Easter Egg
