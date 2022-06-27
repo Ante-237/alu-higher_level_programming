@@ -1,2 +1,3 @@
 4 -> Print float
 5 -> print string
+6 -> play with strings
