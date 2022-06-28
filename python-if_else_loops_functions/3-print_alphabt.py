@@ -2,4 +2,4 @@
 for i in range(ord('a'), ord('z')+1):
     ante = chr(i)
     if ante not in "qe":
-        print(ante, end="")
+        print("{:s}".format(ante), end="")
