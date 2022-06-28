@@ -11,7 +11,6 @@ def uppercase(stru):
         print("{}".format(new_str), end='')
         i = i + 1
     print("")
-        
 
 def islower(strs):
     value = ord(strs)
@@ -19,7 +18,3 @@ def islower(strs):
         return True
     else:
         return False
-
-
-form_me = input("Enter in string :")
-uppercase(form_me)
