@@ -4,14 +4,15 @@ if __name__ == "__main__":
     import sys
 
 
-argNum = len(sys.argv)  #gets number of arguments
-allA = sys.argv  #stores arguments return by sys module
+argNum = len(sys.argv)  # gets number of arguments
+allA = sys.argv  # stores arguments return by sys module
 a = int(allA[1])
 b = int(allA[3])
+s = allA[2]
 if argNum != 4:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     exit(1)
-if str(allA[2]) != "-" or str(allA[2]) != "/" or str(allA[2]) != "*" or str(allA[2]) != "+":
+if s != "-" or s != "/" or s != "*" or s != "+":
     print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
 else:
