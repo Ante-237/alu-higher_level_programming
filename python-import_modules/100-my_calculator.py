@@ -4,20 +4,22 @@ if __name__ == "__main__":
     import sys
 
 
-argNum = len(sys.argv)# gets number of arguments
-allA = sys.argv # stores arguments return by sys module
+argNum = len(sys.argv)  #gets number of arguments
+allA = sys.argv  #stores arguments return by sys module
+a = int(allA[1])
+b = int(allA[3])
 if argNum != 4:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     exit(1)
-if allA[2] != "-" or allA[2] != "/" or allA[2] != "*" or allA[2] != "+":
+if str(allA[2]) != "-" or str(allA[2]) != "/" or str(allA[2]) != "*" or str(allA[2]) != "+":
     print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
 else:
     if allA[2] == "-":
-        print("{:d} - {:d} = {:d}".format(int(allA[1]), int(allA[3]), extra.sub(int(allA[1]), int(allA[3]))))
+        print("{:d} - {:d} = {:d}".format(a, b, extra.sub(a, b)))
     elif allA[2] == "*":
-        print("{:d} * {:d} = {:d}".format(int(allA[1]), int(allA[3]), extra.mul(int(allA[1]), int(allA[3]))))
+        print("{:d} * {:d} = {:d}".format(a, b, extra.mul(a, b)))
     elif allA[2] == "/":
-        print("{:d} / {:d} = {:d}".format(int(allA[1]), int(allA[3]), extra.div(int(allA[1]), int(allA[3]))))
+        print("{:d} / {:d} = {:d}".format(a, b, extra.div(a, b)))
     elif allA[2] == "+":
-        print("{:d} + {:d} = {:d}".format(int(allA[1]), int(allA[3]), extra.add(int(allA[1]), int(allA[3]))))
+        print("{:d} + {:d} = {:d}".format(a, b, extra.add(a, b)))
