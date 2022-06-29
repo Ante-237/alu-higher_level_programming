@@ -8,7 +8,7 @@ number = len(values)
 i = 1
 summ = 0
 if number == 1:
-    print("no arguments")
+    print("{:d}".format(summ))
 elif number == 2:
     print("{:d}".format(int(values[1])))
 elif number > 2:
