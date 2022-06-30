@@ -12,14 +12,13 @@ if argNum != 4:
 else:
     a = int(allA[1])
     b = int(allA[3])
-    s = int(allA[2])
-    if s == "-":
+    if allA[2] == "-":
         print("{:d} - {:d} = {:d}".format(a, b, extra.sub(a, b)))
-    elif s == "*":
+    elif allA[2] == "*":
         print("{:d} * {:d} = {:d}".format(a, b, extra.mul(a, b)))
-    elif s == "/":
+    elif allA[2] == "/":
         print("{:d} / {:d} = {:d}".format(a, b, extra.div(a, b)))
-    elif s == "+":
+    elif allA[2] == "+":
         print("{:d} + {:d} = {:d}".format(a, b, extra.add(a, b)))
     else:
         print("Unkown operator, Available operators: +, -, * and /")
