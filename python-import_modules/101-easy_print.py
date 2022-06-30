@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import ditto
+import module_test
