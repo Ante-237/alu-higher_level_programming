@@ -12,15 +12,15 @@ s = allA[2]
 if argNum != 4:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     exit(1)
-if s != "-" or s != "/" or s != "*" or s != "+":
-    print("Unknown operator. Available operators: +, -, * and /")
-    exit(1)
 else:
-    if allA[2] == "-":
+    if s == "-":
         print("{:d} - {:d} = {:d}".format(a, b, extra.sub(a, b)))
-    elif allA[2] == "*":
+    elif s == "*":
         print("{:d} * {:d} = {:d}".format(a, b, extra.mul(a, b)))
-    elif allA[2] == "/":
+    elif s == "/":
         print("{:d} / {:d} = {:d}".format(a, b, extra.div(a, b)))
-    elif allA[2] == "+":
+    elif s == "+":
         print("{:d} + {:d} = {:d}".format(a, b, extra.add(a, b)))
+    else:
+        print("Unkown operator, Available operators: +, -, * and /")
+        exit(1)
