@@ -31,8 +31,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
             x = list(tuple_b)
             x.append(0)
 
-        sum_t.appen
-        d(y[0] + x[0])
+        sum_t.append(y[0] + x[0])
         sum_t.append(y[1] + x[1])
         x = tuple(sum_t)
         return x
