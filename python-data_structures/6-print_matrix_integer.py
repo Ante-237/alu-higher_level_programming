@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    counter = 1
     for record in matrix:
+        counter = 0
         for i in record:
             if counter == (len(record) - 1):
                 print("{:d}".format(i), end="")
