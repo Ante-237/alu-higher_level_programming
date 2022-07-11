@@ -10,5 +10,3 @@ def multiple_returns(sentence):
         x.append(sentence[0])
     y = tuple(x)
     return y
-
-
