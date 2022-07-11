@@ -3,6 +3,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
     a_len = len(tuple_a)
     b_len = len(tuple_b)
     sum_t = []
+    x = []
+    y = []
     if a_len >= 2 and b_len >= 2:
         sum_t.append(tuple_a[0] + tuple_b[0])
         sum_t.append(tuple_a[1] + tuple_b[1])
@@ -10,7 +12,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
         return x
     if a_len < 2 and b_len < 2:
         sum_t.append(tuple_a[0] + tuple_b[0])
-        sum_t.append( 0 + 0);
+        sum_t.append(0 + 0)
         x = tuple(sum_t)
         return x
     if a_len < 2 or b_len < 2:
@@ -29,7 +31,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
             x = list(tuple_b)
             x.append(0)
 
-        sum_t.append( y[0] + x[0])
-        sum_t.append( y[1] + x[1])
+        sum_t.appen
+        d(y[0] + x[0])
+        sum_t.append(y[1] + x[1])
         x = tuple(sum_t)
         return x
