@@ -13,3 +13,23 @@ def add_tuple(tuple_a=(), tuple_b=()):
         sum_t.append( 0 + 0);
         x = tuple(sum_t)
         return x
+    if a_len < 2 or b_len < 2:
+        if a_len < 1:
+            y = list(tuple_a)
+            y.append(0)
+            y.append(0)
+        if b_len < 1:
+            x = list(tuple_b)
+            x.append(0)
+            x.append(0)
+        if a_len == 1:
+            y = list(tuple_a)
+            y.append(0)
+        if b_len ==1:
+            x = list(tuple_b)
+            x.append(0)
+
+        sum_t.append( y[0] + x[0])
+        sum_t.append( y[1] + x[1])
+        x = tuple(sum_t)
+        return x
