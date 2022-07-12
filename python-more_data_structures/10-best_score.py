@@ -2,7 +2,7 @@
 
 
 def best_score(a_):
-    if a_ == None:
+    if a_ is None:
         return "None"
     elif len(a_) > 0:
         dict_me = dict(sorted(a_.items(), key=lambda x: x[1], reverse=True))
