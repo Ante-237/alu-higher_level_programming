@@ -3,9 +3,4 @@
 
 
 def update_dictionary(a_dictionary, key, value):
-    temp_list = list(a_dictionary.keys())
-    for temp in a_dictionary:
-        if key == temp:
-            a_dictionary[key] = value
-        if key not in temp_list:
-            a_dictionary[key] = value
+    a_dictionary[key] = value
