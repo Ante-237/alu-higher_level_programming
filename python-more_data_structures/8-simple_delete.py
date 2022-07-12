@@ -2,7 +2,7 @@
 # delete a key in a dictionary
 
 
-def simplel_delete(a_dictionary, key=""):
+def simple_delete(a_dictionary, key=""):
     if key == "":
         return a_dictionary
     else:
