@@ -4,6 +4,5 @@
 
 def print_sorted_dictionary(a_dictionary):
     sorted_dictionary = sorted(a_dictionary)
-    print(sorted_dictionary)
     for temp in sorted_dictionary:
         print("{}: {}".format(temp, a_dictionary[temp]))
