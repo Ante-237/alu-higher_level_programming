@@ -2,10 +2,8 @@
 
 
 def complex_delete(a_dictionary, value):
-    copy_d = a_dictionary
-    for key,value_one in copy_d.items():
+    for key,value_one in a_dictionary.items():
         if value == value_one:
-            del copy_d[key]
+            del a_dictionary[key]
             break
-    a_dictionary = copy_d
     return a_dictionary
