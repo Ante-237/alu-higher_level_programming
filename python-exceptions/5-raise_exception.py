@@ -3,4 +3,5 @@
 
 def raise_exception():
     big = "shoes"
-    print("{:d}".format(big))
+    if big > 9:
+        return 
