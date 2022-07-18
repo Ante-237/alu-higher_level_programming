@@ -10,6 +10,6 @@ def safe_print_list_integers(my_list=[], x=0):
             num += 1
         except (TypeError, ValueError):
             pass
-            count += 1
+        count += 1
     print()
     return num
