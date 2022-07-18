@@ -4,4 +4,4 @@
 def raise_exception():
     big = "shoes"
     if big > 9:
-        return 
+        return
