@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """
 NO MODULE USED
+
+MODULE IN SQUARE FILE CLASS
+
 """
 
 
@@ -12,7 +15,7 @@ class Square:
         """
         INIT FOR CLASS
         """
-        self.__size = size
+        self.size = size
 
     @size.setter
     def size(self, value):
