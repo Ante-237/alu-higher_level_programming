@@ -9,21 +9,30 @@ class Square:
     SQUARE CLASS
     """
     def __init__(self, size=0):
-        self.size = size
+        """
+        INSTANCE INIT
+        """
+        self._size = size
 
     def size(self, value):
+        """
+        A SETTER
+        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.size = value
+            self._size = value
 
     def size(self):
-        if not isinstance(self.size, int):
-            raise TypeError("size must be an integer")
-        else:
-            return self.size
+        """
+        A GETTER
+        """
+            return self._size
 
     def area(self):
-        return self.size**2
+        """
+        CALCULATE AREA
+        """
+        return self._size**2
