@@ -13,7 +13,7 @@ class Square:
         Args: 
             size (int): default to 0 sets side of square
         """
-        self.size = size
+        self.__size = size
 
     @size.setter
     def size(self, value):
