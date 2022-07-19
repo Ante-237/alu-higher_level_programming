@@ -54,12 +54,14 @@ class Square:
 
     def my_print(self):
         counter = self.__size
+        startsize = self.__size
         coun_num = 0
         while self.__size > coun_num:
             while counter > 0:
                 print("#", end="")
                 counter -= 1
             print()
+            counter = startsize
             self.__size -= 1
         if self.__size == 0:
             print("--")
