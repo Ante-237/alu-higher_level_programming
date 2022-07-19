@@ -9,7 +9,7 @@ class Square:
     SQUARE CLASS
     """
     def __init__(self, size=0):
-        self._Square__size = size
+        self.size = size
 
     def size(self, value):
         if not isinstance(value, int):
@@ -17,10 +17,10 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self._Square__size = value
+            self.size = value
 
     def size(self):
-        return self._Square__size
+        return self.size
 
     def area(self):
-        return self._Square__size**2
+        return self.size**2
