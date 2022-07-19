@@ -8,5 +8,5 @@ class Square:
     """
     CLASS CREATES A PRIVATE SIZE INSTANCE VARIABLE AND ASSIGNS IT
     """
-    def __init__(self, sizee):
-        self.size = sizee
+    def __init__(self, size):
+        self._Square_size = size
