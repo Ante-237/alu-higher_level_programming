@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-
+"""
+THIS CODE CONTAINS NO MODULESL
+"""
 
 class Square():
-    """ EMPTY CLASS FUNCTION
-    CLASS IS A SQUARE CLASS
+    """ 
+    CLASS IS A SQUARE CLASS AND IS EMPTY
     """
