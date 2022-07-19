@@ -6,7 +6,7 @@ NO MODULE USE
 
 class Square:
     """
-    CLASS THAT ASSIGNS SIZE OF SQUARE 
+    CLASS THAT ASSIGNS SIZE OF SQUARE
     """
     def __init__(self, size=0):
         if not isinstance(size, int):
