@@ -63,5 +63,3 @@ class Square:
             print()
             counter = startsize
             self.__size -= 1
-        if self.__size == 0:
-            print("--")
