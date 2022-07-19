@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-"""
-NO MODULE USED
-
-MODULE IN SQUARE FILE CLASS
-
-"""
+""" NO MODULE USED MODULE IN SQUARE FILE CLASS """
 
 
 class Square:
