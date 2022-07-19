@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ 
-NO MODULE USED
+DOCUMENTATION FOR MODULES IN HERE WILL DO THE TRICK
 """
 
 
@@ -10,7 +10,7 @@ class Square():
     """
 
 
-    __init__(self, size):
+    def __init__(self, size):
         self.size = size
         """
         FUNCTION ASSINGS SIZE TO THE CURRENT INSTANCE
