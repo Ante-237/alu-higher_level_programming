@@ -13,7 +13,10 @@ class Square:
     """
     def __init__(self, size=0):
         """
-        INIT FOR CLASS
+        Returns:
+            just init values
+        Args: 
+            size (int): default to 0 sets side of square
         """
         self.size = size
 
@@ -21,7 +24,13 @@ class Square:
     def size(self, value):
         """
         setter method
-        raises exceptions
+        Args:
+            value(int): size of the side of the square
+        Raises:
+            TypeError: if not int
+            ValueError: if less than 0
+        Returns:
+            Setter no return
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -34,12 +43,16 @@ class Square:
     def size(self):
         """
         GETTER METHOD
-        RETURNS PRIVATE HIDDEN VALUE
+        Return:
+            size of square
         """
         return self.__size
 
     def area(self):
         """
-        RETURNS THE SQUARE AREA
+        SOME AREA METHOD
+
+        Return:
+            the calculated square area
         """
         return self.__size**2
