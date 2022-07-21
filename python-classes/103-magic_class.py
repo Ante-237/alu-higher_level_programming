@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+""" SOMETHING COOOL """
 import math
+""" SOMETHING COOL """
 
 
 class MagicClass:
