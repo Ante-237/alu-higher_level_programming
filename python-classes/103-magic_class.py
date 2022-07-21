@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""NO MODULE USED"""
+import math
+""" USING THE MATH MODULE """
 
 
 class MagicClass:
