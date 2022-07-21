@@ -68,6 +68,8 @@ class Rectangle:
         else:
             while counter < self.__height:
                 output += "#"*self.__width
+                if counter == (self.__height - 1):
+                    break
                 output += "\n"
                 counter += 1
         return output
