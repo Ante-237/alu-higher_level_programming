@@ -21,7 +21,7 @@ class Node:
             raise TypeError("data must be an integer")
         else:
             self.__data = value
-    
+
     @property
     def next_node(self):
         return self.__next_node
@@ -47,7 +47,7 @@ class SinglyLinkedList:
             new_node = Node(value)
             temporal = self.__head
             while temporal is not None:
-                if temp.__next_node is None:
+                if temporal.__next_node is None:
                     temporal.__next_node = new_node
                     new_node.__next_node = None
                 if new_node.__data < temporal.__next_node.__data:
@@ -59,7 +59,7 @@ class SinglyLinkedList:
         output = ""
         temporal = self.__head
         while temporal is not None:
-            output += str(self.__data)
+            output += str(temporal__.data)
             output += '\n'
             temporal = temporal.__next_node
         return output
