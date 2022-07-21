@@ -41,7 +41,7 @@ class Node:
             TypeError: if value is not integer
         """
         if not type(value) is int:
-            raise TypeError("data must be integer")
+            raise TypeError("data must be an integer")
         else:
             self.__data = value
 
@@ -68,6 +68,7 @@ class Node:
         else:
             self.__next_node = value
 
+            
 class SinglyLinkedList:
     """
     SiglyLinkedList defines the singly linked list
@@ -84,7 +85,7 @@ class SinglyLinkedList:
         result = ""
         tmp = self.__head
         while tmp is not None:
-            result += str(self.data)
+            result += str(tmp.data)
             result += '\n'
             tmp = tmp.__next_node
         return result
