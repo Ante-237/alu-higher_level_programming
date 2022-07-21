@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import math
-""" USING THE MATH MODULE """
 
 
 class MagicClass:
