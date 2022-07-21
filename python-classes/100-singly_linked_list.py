@@ -19,7 +19,7 @@ class Node:
 
     @data.setter
     def data(self, value):
-        if isinstance(value, int):
+        if not isinstance(value, int):
             self.__data = value
         else:
             raise TypeError("data must be an integer")
@@ -64,7 +64,7 @@ class SinglyLinkedList:
         output = ""
         temporal = self.__head
         while temporal is not None:
-            output += str(self.data)
+            output += str(self.__data)
             output += '\n'
             temporal = temporal.__next_node
         return output
