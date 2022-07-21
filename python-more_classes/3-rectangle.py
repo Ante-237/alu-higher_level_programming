@@ -62,10 +62,12 @@ class Rectangle:
 
     def __str__(self):
         counter = 0
+        output = ""
         if self.__width == 0 or self.__height == 0:
-            print("")
+            return ""
         else:
             while counter < self.__height:
-                print("#"*self.__width)
+                output += "#"*self.__width
+                output += "\n"
                 counter += 1
-        return ""
+        return output
