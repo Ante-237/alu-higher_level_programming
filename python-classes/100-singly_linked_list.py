@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Node Class
-creates node obj
+node class
 """
 
 
@@ -37,11 +36,6 @@ class Node:
         else:
             raise TypeError("next_node must be a Node object")
 
-"""
-SinglyLinkedList class
-creats a linkedlist of sorted Node objs and prints
-"""
-
 
 class SinglyLinkedList:
     """
@@ -75,5 +69,3 @@ class SinglyLinkedList:
             if tmp is not None:
                 _list += "\n"
         return (_list)
-Footer
-© 2022 GitHub, Inc.
