@@ -1,109 +1,79 @@
 #!/usr/bin/python3
 """
-Singly linked list Module
+Node Class
+creates node obj
 """
 
 
 class Node:
     """
-    Node class
-    Attributes:
-        data (int): the data stored in the node
-        next_node (Node): a pointer to the next node
-            in the linked list
+    Initializing node obj
     """
     def __init__(self, data, next_node=None):
-        """
-        Class initializer
-        Args:
-            data (int): the data stored in the node.
-            next_node (Node): a pointer to the next node
-        """
         self.data = data
-        self.next_node = None
+        self.next_node = next_node
 
     @property
     def data(self):
-        """
-        Getter of the attribute data
-        Returns:
-            data: the stored data
-        """
-        return self.__data
+        return (self.__data)
 
     @data.setter
     def data(self, value):
-        """
-        Setter of the attribure data
-        Args:
-            value (int): the given data
-        Raises:
-            TypeError: if value is not integer
-        """
-        if not type(value) is int:
+        if type(value) is not int:
             raise TypeError("data must be an integer")
         else:
             self.__data = value
 
     @property
     def next_node(self):
-        """
-        Getter of the next_node
-        Returns:
-            next_node: a pointer to the next node
-        """
-        return self.__next_node
+        return (self.__next_node)
 
     @next_node.setter
     def next_node(self, value):
-        """
-        Setter of the next_node
-        Args:
-            value (Node): a pointer to the next node
-        Raises:
-            TypeError: if value not node or None
-        """
-        if not isinstance(value, Node) and value is not None:
-            raise TypeError("next_node must be a Node object")
-        else:
+        if value is None:
             self.__next_node = value
+        elif isinstance(value, Node):
+            self.__next_node = value
+        else:
+            raise TypeError("next_node must be a Node object")
 
-            
+"""
+SinglyLinkedList class
+creats a linkedlist of sorted Node objs and prints
+"""
+
+
 class SinglyLinkedList:
     """
-    SiglyLinkedList defines the singly linked list
-    Attributes:
-        head (Node): a pointer to the singly linked list
+    Initializing SinglyLinkedList obj
     """
     def __init__(self):
-        """
-        Class initializer
-        """
         self.__head = None
 
-    def __str__(self):
-        result = ""
-        tmp = self.__head
-        while tmp is not None:
-            result += str(tmp.data)
-            result += '\n'
-            tmp = tmp.__next_node
-        return result
-
+    """
+    Insert sorted Node obj
+    """
     def sorted_insert(self, value):
-        """
-        Inserts new Node into the correct soeted position
-        """
+        if self.__head is None or value < self.__head.data:
+            self.__head = Node(value, self.__head)
+            return
+        tmp = self.__head
+        while tmp.next_node is not None and tmp.next_node.data < value:
+            tmp = tmp.next_node
+        tmp.next_node = Node(value, tmp.next_node)
+    """
+    Print
+    """
+    def __str__(self):
         if self.__head is None:
-            self.__head = Node(value)
-        else:
-            new_node = Node(value)
-            tmp = self.__head
-            while tmp is not None:
-                if tmp.__next_node is None:
-                    tmp.__next_node = new_node
-                    new_node.__next_node = None
-                if new_node.__data < tmp.__next_node.__data:
-                    new_node.__next_node = tmp.__next_node
-                    tmp.__next_node = new_node
-                tmp = tmp.__next_node
+            return ("")
+        tmp = self.__head
+        _list = ""
+        while tmp is not None:
+            _list += str(tmp.data)
+            tmp = tmp.next_node
+            if tmp is not None:
+                _list += "\n"
+        return (_list)
+Footer
+© 2022 GitHub, Inc.
