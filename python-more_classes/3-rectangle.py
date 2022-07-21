@@ -68,3 +68,4 @@ class Rectangle:
             while counter < self.__height:
                 print("#"*self.__width)
                 counter += 1
+        return ""
