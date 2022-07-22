@@ -70,7 +70,7 @@ class Rectangle:
             return ""
         else:
             while counter < self.__height:
-                output += str(self.print_symbol)*self.__width
+                output += str(self.print_symbol) * self.__width
                 if counter == (self.__height - 1):
                     break
                 output += "\n"
