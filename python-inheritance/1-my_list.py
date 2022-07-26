@@ -7,4 +7,4 @@ class MyList(list):
 
     def print_sorted(self):
         """ function prints list in sorted order """
-        print(my_list.sort())
+        print(sorted(self))
