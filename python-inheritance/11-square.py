@@ -5,6 +5,7 @@ imports module from another module
 """
 
 
+""" importing class for use """
 Rectangle = __import__("9-rectangle.py").Rectangle
 
 
