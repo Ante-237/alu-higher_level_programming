@@ -1,22 +1,20 @@
 #!/usr/bin/python3
 """
-module contains good stuff
-imports module from another module 
+This module contains a class
 """
 
 
-Rectangle = __import__("9-rectangle.py").Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
     """
-    square class that makes use of parent class
+    class Square that inherits from rectangle
     """
-
     def __init__(self, size):
         """
-        class init which class parent init
+        class instantiation
         """
         self.integer_validator("size", size)
         self.__size = size
-        super().__init_(size, size)
+        super().__init__(size, size)
