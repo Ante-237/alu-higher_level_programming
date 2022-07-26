@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" imports module from another module """
+""" 
+imports module from another module 
+"""
 
 
 Rectangle = __import__("9-rectangle.py").Rectangle
