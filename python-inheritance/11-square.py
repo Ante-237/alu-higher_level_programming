@@ -23,12 +23,12 @@ class Square(Rectangle):
 
     def area(self):
         """
-        area cal
+        area calculation function by value
         """
         return (self.__size ** 2)
 
     def __str__(self):
         """
-        output representation
+        area calculatioin function by string
         """
         return("[Square] {:d}/{:d}".format(self.__size, self.__size))
