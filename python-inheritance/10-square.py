@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" 
+"""
+module contains good stuff
 imports module from another module 
 """
 
