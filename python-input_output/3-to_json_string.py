@@ -6,7 +6,4 @@ import json
 
 def to_json_string(my_obj):
     """ converts object to json object """
-    try:
-        return json.dump(my_obj)
-    except ValueError as e:
-        print(e)
+    return json.dump(my_obj)
