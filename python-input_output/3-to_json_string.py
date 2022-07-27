@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" import json module to access json functions """
 import json
 """ returns json representation of object """
 
