@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-module uses the famous binary sort 
-to sort integers
+function  uses the famous binary sort 
+to sort integers 
 """
 
 
