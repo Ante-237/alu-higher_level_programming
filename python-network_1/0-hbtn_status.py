@@ -3,14 +3,13 @@
 import urllib.request
 
 
-
 """making request to provided url"""
 if __name__ == "__main__":
     """making request to provided url"""
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
         html = response.read()
         print('Body response:')
-        print("     - type: {}".format(type(html)))
-        print("     - content: {}".format(html))
+        print("         - type: {}".format(type(html)))
+        print("         - content: {}".format(html))
         temp = str(html)
-        print("     - utf8 content: {}".format(temp[2:-1]))
+        print("         - utf8 content: {}".format(temp[2:-1]))
