@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" module uses another module to request to make request """
+""" module uses another module to request to make request but we deal with the header sections """
 import urllib.request
-import sys 
+import sys
 
 """making request to provided url"""
 if __name__ == "__main__":
