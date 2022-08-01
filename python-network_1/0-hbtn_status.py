@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import urllib.request
 """ module uses another module to request to make request """
+import urllib.request
 
 
 
+"""making request to provided url"""
 if __name__ == "__main__":
     """making request to provided url"""
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
