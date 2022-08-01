@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" module uses another module to request to make request but we deal with the header sections """
+""" module uses another module to request to make 
+request but we deal with the header sections 
+"""
 import urllib.request
 import sys
 
