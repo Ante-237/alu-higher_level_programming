@@ -11,4 +11,4 @@ import sys
 if __name__ == "__main__":
     r = requests.get(sys.argv[1])
     dict_got = r.headers
-    print(dict_got['x-request-id'])
+    print(dict_got.get('X-Request-Id'))
