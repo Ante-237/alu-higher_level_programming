@@ -10,7 +10,7 @@ if __name__ == "__main__":
     if first_argv == None:
         first_argv = ""
     url = 'http://0.0.0.0:5000/search_user'
-    response = request.post(url,{'q',first_argv})
+    response = requests.post(url,{'q',first_argv})
     if response.text:
         if isintance(response.text,json):
             print(response.text)
