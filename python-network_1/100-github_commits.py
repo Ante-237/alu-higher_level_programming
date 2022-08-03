@@ -4,12 +4,10 @@
 import sys
 import requests
 
-url = "https://api.github.com/repos"
 
 if __name__ == "__main__":
     res = requests.get('https://api.github.com/repos/{}/{}/commits'
-                       .format(sys.argv[2], sys.argv[1])).json()
-    print(res)
+                       .format(sys.argv[1], sys.argv[2])).json()
     count = 0
     for commit in res:
         name = commit.get("commit").get("author").get("name")
