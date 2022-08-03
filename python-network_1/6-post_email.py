@@ -7,5 +7,5 @@ import requests
 
 if __name__ == "__main__":
     # create dictionary of data to post
-    res = requests.post(sys.argv[1], {'email':sys.argv[2]})
+    res = requests.post(sys.argv[1], {'email': sys.argv[2]})
     print(res.text)
