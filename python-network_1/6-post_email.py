@@ -7,6 +7,5 @@ import requests
 
 if __name__ == "__main__":
     # create dictionary of data to post
-    data = {'email', sys.argv[2]}
-    res = requests.post(sys.argv[1], data)
+    res = requests.post(url=sys.argv[1], json={'email':sys.argv[2]})
     print(res.content)
