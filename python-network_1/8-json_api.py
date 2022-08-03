@@ -1,9 +1,7 @@
 #!/usr/bin/python3
+""" documenta here """
 import requests
 from sys import argv
-"""
-Script that takes a letter and post request to url/search_user
-"""
 
 
 if __name__ == "__main__":
