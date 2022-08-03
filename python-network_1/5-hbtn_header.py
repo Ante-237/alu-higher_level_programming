@@ -9,6 +9,6 @@ import sys
 # url = 'https://intranet.hbtn.io'
 
 if __name__ == "__main__":
-    r = requests.get(argv[1])
+    r = requests.get(sys.argv[1])
     dict_got = r.headers
     print(dict_got['x-request-id'])
