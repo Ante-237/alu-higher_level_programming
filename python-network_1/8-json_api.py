@@ -11,7 +11,7 @@ if __name__ == "__main__":
         first_argv = ""
     url = 'http://0.0.0.0:5000/search_user'
     try:
-        response = requests.post(url,data={'q',first_argv}.json())
+        response = requests.post(url,data={'q',first_argv}).json()
         if 'id' in response and 'name' in response:
             print("[{}] {}".format(response['id'], response['name']))
         else:
