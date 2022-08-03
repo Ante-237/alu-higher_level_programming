@@ -10,7 +10,11 @@ if __name__ == "__main__":
     if first_argv == None:
         first_argv = ""
     url = 'http://0.0.0.0:5000/search_user'
-    response = requests.post(url,{'q',first_argv})
-    if response.text:
-        if isintance(response.text,json):
-            print(response.text)
+    try:
+        response = requests.post(url,data={'q',first_argv}.json())
+        if 'id' in response and 'name' in response:
+            print("[{}] {}".format(response['id'], response['name']))
+        else:
+            print("No result")
+    except ValueError:
+        print("Not a valid JSON")
