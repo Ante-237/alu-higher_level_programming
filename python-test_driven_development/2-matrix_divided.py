@@ -6,10 +6,7 @@ of a matrix
 
 
 def matrix_divided(matrix, div):
-    """simple function
-     multiple task
-     """
-
+    
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
