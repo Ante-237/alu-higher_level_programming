@@ -4,6 +4,7 @@ divides all elements
 of a matrix
 """
 
+
 def matrix_divided(matrix, div):
     """
     changes function sure
@@ -14,9 +15,9 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
-        
-        
-   prevRowLen = -1
+
+
+    prevRowLen = -1
     new_matrix = []
     for row in matrix:
         if (prevRowLen != len(row) and prevRowLen != -1):
