@@ -5,7 +5,9 @@ of a matrix
 """
 
 def matrix_divided(matrix, div):
-    
+    """
+    changes function sure
+    """
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
