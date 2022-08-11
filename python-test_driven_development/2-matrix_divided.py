@@ -5,9 +5,6 @@ This module defines function to divide two list int a matrix
 
 
 def matrix_divided(matrix, div):
-<<<<<<< HEAD
-
-=======
         """
         Divides list and Raises TypeError
         """
@@ -34,4 +31,3 @@ def matrix_divided(matrix, div):
                         new[count][a] = round(item / div, 2)
         else:
                 return (new)
->>>>>>> 0ff4c55f185fef5ac5be62f4bf91676a69775cda
