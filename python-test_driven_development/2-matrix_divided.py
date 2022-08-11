@@ -1,34 +1,33 @@
 #!/usr/bin/python3
 """
-divides all elements
-of a matrix
+This module defines function to divide two list int a matrix
 """
 
 
 def matrix_divided(matrix, div):
-    """
-    changes function sure
-    """
-    if not isinstance(div, (int, float)):
-        raise TypeError("div must be a number")
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
-    elif div == 0:
-        raise ZeroDivisionError("division by zero")
-
-
-    prevRowLen = -1
-    new_matrix = []
-    for row in matrix:
-        if (prevRowLen != len(row) and prevRowLen != -1):
-            raise TypeError("Each row of the matrix must have the same size")
-            return matrix
-        for ele in row:
-            if not isinstance(ele, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of" +
-                                " integers/floats")
-                return matrix
-            else:
-                new_matrix.append(round(ele / div, 2))
-        prevRowLen = len(row)
-    return new_matrix
+        """
+        Divides list and Raises TypeError
+        """
+        if not isinstance(div, (int, float)):
+                raise TypeError("div must be a number")
+        elif div is 0:
+                raise ZeroDivisionError("division by zero")
+        typeErr = "matrix must be a matrix (list of lists) of integers/floats"
+        sizeErr = "Each row of the matrix must have the same size"
+        new = []
+        if matrix is None or len(matrix) is 0 or len(matrix[0]) is 0:
+                raise TypeError(typeErr)
+        old = len(matrix[0])
+        for count, y in enumerate(matrix):
+                if not isinstance(y, list):
+                        raise TypeError(typeErr)
+                if len(y) != old:
+                        raise TypeError(sizeErr)
+                old = len(y)
+                new.append(y[:])
+                for a, item in enumerate(y):
+                        if not isinstance(item, (int, float)):
+                                raise TypeError(typeErr)
+                        new[count][a] = round(item / div, 2)
+        else:
+                return (new)
