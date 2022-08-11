@@ -5,8 +5,13 @@ of a matrix
 """
 
 
-def matrix_divided(matrix, div)
+<<<<<<< HEAD
+def matrix_divided(matrix, div):
 
+=======
+def matrix_divided(matrix, div):
+    
+>>>>>>> 81397d2a124b4a24ba949e53d56901aaed81c94b
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
