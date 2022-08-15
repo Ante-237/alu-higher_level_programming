@@ -78,3 +78,7 @@ class Rectangle(Base):
         """ graphic representation """
         for i in range(0, self.__height):
             print('#' * self.__width)
+
+    def __str__(self):
+        """ the string representation """
+        print("[Rectangle] ({}) {}/{} - {}/{}".format(self.__id, self.__x, self.__y, self.__width, self.__height))
