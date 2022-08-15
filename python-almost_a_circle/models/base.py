@@ -5,6 +5,8 @@ just module documentation
 
 
 class Base:
+    """ this is a base class
+    that keeps track of ids"""
 
     def __init__(self, id=None):
         self.__nb_objects = 0
