@@ -89,3 +89,20 @@ class Rectangle(Base):
         e = self.__height
         return ("[Rectangle] ({}) {:d}/{:d} - {:d}/{:d}".
                 format(d, a, b, c, e))
+    
+    def update(self, *args, **kwargs):
+        """take multi update"""
+        dct = {}
+        if args is not None and len(args) > 0:
+            keys = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args) if len(args) <= 5 else 5):
+                dct[keys[i]] = args[i]
+        else:
+            dct = kwargs
+
+        if len(dct) > 0:
+            for key, value in dct.items():
+                if key == "id" and value is None:
+                    self.__init__(self.__width, self.__height, self.__x, self.__y)
+                else:
+                    setattr(self, key, value)
