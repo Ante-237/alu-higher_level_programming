@@ -18,8 +18,9 @@ def text_indentation(text):
             print()
             trigger = 1
             continue
-        if trigger == 1 and i is " ":
-            trigger = 0
-            continue
+        if trigger == 1:
+            if i is " ":
+                trigger = 0
+                continue
         else:
             print(i, end="")

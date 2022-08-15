@@ -4,35 +4,38 @@ importing module for whatever:
 testing for . in lines:
 	>>> indent("show. now. now.")
 	show.
-
+	<BLANKLINE>
 	now.
-
+	<BLANKLINE>
 	now.
+	<BLANKLINE>
 
 testing for : in lines:
 	>>> indent("show: now: now:")
 	show:
-
+	<BLANKLINE>
 	now:
-
+	<BLANKLINE>
 	now:
+	<BLANKLINE>
 
 test for ? in lines:
 	>>> indent("show? now? now?")
 	show?
-
+	<BLANKLINE>
 	now?
-
+	<BLANKLINE>
 	now?
-
+	<BLANKLINE>
 
 test for both ? . : in lines:
 	>>> indent("For life? now: is not the time.")
 	For life?
-
+	<BLANKLINE>
 	now:
-
+	<BLANKLINE>
 	is not the time.
+	<BLANKLINE>
 
 testnig for wrong type:
 	>>> indent(5)
