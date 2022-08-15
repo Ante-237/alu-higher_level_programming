@@ -76,8 +76,9 @@ class Rectangle(Base):
 
     def display(self):
         """ graphic representation """
-        for i in range(0, self.__height):
-            print(('\n' * self.__y) + '\n'.join((" " * self.__x) + ('#' * self.__width))
+         print(("\n" * self.__y) + "\n".join(((" " * self.__x) +
+                                             ("#" * self.__width))
+                                            for a in range(self.__height)))
 
     def __str__(self):
         """ the string representation """
