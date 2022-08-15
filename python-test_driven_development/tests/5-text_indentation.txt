@@ -46,3 +46,9 @@ testnig for wrong type:
 testing strign with blank lines:
 	>>> indent("food is good")
 	food is good
+
+testing missing argument:
+	>>> indent()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
