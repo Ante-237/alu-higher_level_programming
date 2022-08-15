@@ -12,8 +12,7 @@ def print_square(size):
     elif size < 0:
         raise ValueError("size must be >= 0")
 
-                
     length = size
     while size > 0:
-        print("#"* length)
+        print("#" * length)
         size -= 1
