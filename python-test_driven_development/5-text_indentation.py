@@ -5,19 +5,20 @@ module for text indentation
 
 
 def text_indentation(text):
-    """ just the function 
+    """ just the function
     here """
-    
+
     if type(text) is not str:
         raise TypeError("text must be a string")
 
     trigger = 0
     for i in text:
-        if i in ['.','?',':']:
+        if i in ['.', '?', ':']:
             print(i)
+            print()
             trigger = 1
             continue
-        if trigger == 1:
+        if trigger == 1 and i is " ":
             trigger = 0
             continue
         else:

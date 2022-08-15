@@ -4,25 +4,34 @@ importing module for whatever:
 testing for . in lines:
 	>>> indent("show. now. now.")
 	show.
+
 	now.
+
 	now.
 
 testing for : in lines:
 	>>> indent("show: now: now:")
 	show:
+
 	now:
+
 	now:
 
 test for ? in lines:
 	>>> indent("show? now? now?")
 	show?
+
 	now?
+
 	now?
+
 
 test for both ? . : in lines:
 	>>> indent("For life? now: is not the time.")
 	For life?
+
 	now:
+
 	is not the time.
 
 testnig for wrong type:
@@ -30,3 +39,7 @@ testnig for wrong type:
 	Traceback (most recent call last):
 	...
 	TypeError: text must be a string
+
+testing strign with blank lines:
+	>>> indent("food is good")
+	food is good
