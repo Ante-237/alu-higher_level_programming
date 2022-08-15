@@ -11,4 +11,4 @@ def lazy_matrix_mul(m_a, m_b):
     just a function
     using a module
     """
-    return np.dot(m_a, m_b)
+    return np.matmul(m_a, m_b)
