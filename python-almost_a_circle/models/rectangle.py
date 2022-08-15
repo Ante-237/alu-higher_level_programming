@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ rectangle module """
-from base import Base
+Base = __import__("base.py").Base
 
 
 
