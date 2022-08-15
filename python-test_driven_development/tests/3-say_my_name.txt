@@ -9,19 +9,13 @@ Testing for int and string:
 	>>> say_name(1, "nic")
 	Traceback (most recent call last):
 	...
-	TypeError : first_name must be a string
+	TypeError: first_name must be a string
 
 Testing for string and int:
 	>>> say_name("nic", 1)
 	Traceback (most recent call last):
 	...
-	TypeError : last_name must be a string
-
-Testing for both int input:
-	>>> say_name(1, 1)
-	Traceback (most recent call last):
-	...
-	TypeError : first_name must be a string
+	TypeError: last_name must be a string
 
 Testing for one string input:
 	>>> say_name("nic")
