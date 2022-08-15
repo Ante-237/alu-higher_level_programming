@@ -82,12 +82,12 @@ Now use it:
 	>>> lazy_matrix_mul([[1, 2], ["Betty", 4]], [[1, 2], [3, 4]])
 	Traceback (most recent call last):
 	...
-	ValueError: data type must provide an itemsize
+	ValueError: invalid data type for einsum
 
 	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, "Holberton"], [3, 4]])
 	Traceback (most recent call last):
 	...
-	ValueError: data type must provide an itemsize
+	ValueError: invalid data type for einsum
 
 	>>> lazy_matrix_mul([[1, 2], [None, 4]], [[1, 2], [3, 4]])
 	Traceback (most recent call last):
