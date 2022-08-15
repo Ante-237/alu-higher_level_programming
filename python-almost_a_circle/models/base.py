@@ -7,11 +7,12 @@ just module documentation
 class Base:
     """ this is a base class
     that keeps track of ids"""
+    id = 0
+    __nb_objects = 0
 
     def __init__(self, id=None):
-        self.__nb_objects = 0
         if id is not None:
             self.id = id
         else:
-            self.__nb_objects += 1
-            self.id = self.__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
