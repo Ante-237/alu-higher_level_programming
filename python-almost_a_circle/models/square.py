@@ -12,7 +12,6 @@ class Square(Rectangle):
     def __str__(self):
         """ just string form """
         d = self.id
-        a = self.__width
         b = self.__height
         c = self.__x
         e = self.__y
