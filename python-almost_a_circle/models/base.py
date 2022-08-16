@@ -57,3 +57,19 @@ class Base:
             tempo = cls(1)
         tempo.update(**dictionary)
         return (tempo)
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        load from file
+        """
+        fn = cls.__name__ + ".json"
+        lst = []
+        try:
+            with open(fn, mode="r", encoding='utf-8') as myFile:
+                lst = cls.from_json_string(myFile.read())
+            for i, j in enumerate(lst):
+                lst[i] = cls.create(**lst[i])
+        except:
+            pass
+        return (lst)
