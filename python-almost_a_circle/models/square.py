@@ -12,7 +12,7 @@ class Square(Rectangle):
     def __str__(self):
         """ just string form """
         d = self.id
-        b = self.__height
-        c = self.__x
-        e = self.__y
+        b = self.height
+        c = self.x
+        e = self.y
         return ("[Square] ({}) {}/{} - {}".format(d, c, e, b))
