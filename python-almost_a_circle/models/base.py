@@ -45,3 +45,15 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        just function play with instances
+        """
+        if cls.__name__ is "Rectangle":
+            tempo = cls(1, 1)
+        if cls.__name__ is "Square":
+            tempo = cls(1)
+        tempo.update(**dictionary)
+        return (tempo)
