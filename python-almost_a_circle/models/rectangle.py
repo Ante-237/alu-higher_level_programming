@@ -109,3 +109,16 @@ class Rectangle(Base):
                     self.__init__(a, b, c, self.__y)
                 else:
                     setattr(self, key, value)
+
+    
+    def to_dictionary(self):
+        """just dictionary
+        representation
+        """
+        dict = {}
+        dict["id"] = self.id
+        dict["width"] = self.width
+        dict["height"] = self.height
+        dict["x"] = self.x
+        dict["y"] = self.y
+        return (dict)
