@@ -9,11 +9,11 @@ class Square(Rectangle):
         """just using the super class"""
         super().__init__(size, size, x, y, id)
 
-    def __str__(self,t=""):
+    def __str__(self):
         """ just string form """
         d = self.id
-        a = Rectangle.__width
-        b = Rectangle.__height
-        c = Rectangle.__x
-        e = Rectangle.__y
+        a = self.__width
+        b = self.__height
+        c = self.__x
+        e = self.__y
         return "[Square] ({}) {}/{} - {}".format(d, c, e, b)
