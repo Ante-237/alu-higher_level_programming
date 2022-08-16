@@ -38,3 +38,10 @@ class Base:
                 ob.append(cls.to_dictionary(i))
         with open(s_name, mode="w", encoding='utf-8') as mFile:
             mFile.write(cls.to_json_string(ob))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """just another function"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
