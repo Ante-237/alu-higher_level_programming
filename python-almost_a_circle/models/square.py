@@ -15,4 +15,4 @@ class Square(Rectangle):
         b = self.__height
         c = self.__x
         e = self.__y
-        return "[Square] ({}) {}/{} - {}".format(d, c, e, b)
+        return ("[Square] ({}) {}/{} - {}".format(d, c, e, b))
