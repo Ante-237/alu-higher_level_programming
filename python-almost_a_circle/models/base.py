@@ -4,7 +4,7 @@ just module documentation
 """
 import json
 import csv
-import turtle
+# import turtle
 from random import choice as random
 
 
@@ -32,15 +32,16 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ writing to file
+        """Writes the JSON string representation of list_objs to a file.
+        Args:
+            list_objs (list): a list of objects.
         """
-        s_name = cls.__name__ + ".json"
-        ob = []
-        if list_objs is not None:
-            for i in list_objs:
-                ob.append(cls.to_dictionary(i))
-        with open(s_name, mode="w", encoding='utf-8') as mFile:
-            mFile.write(cls.to_json_string(ob))
+        lst = []
+        if list_objs is not None and len(list_objs) > 0:
+            for obj in list_objs:
+                lst.append(obj.to_dictionary())
+        with open(cls.__name__ + ".json", 'w') as f:
+            f.write(Base.to_json_string(lst))
 
     @staticmethod
     def from_json_string(json_string):
@@ -54,9 +55,9 @@ class Base:
         """
         just function play with instances
         """
-        if cls.__name__ is "Rectangle":
+        if cls.__name__ == "Rectangle":
             tempo = cls(1, 1)
-        if cls.__name__ is "Square":
+        if cls.__name__ == "Square":
             tempo = cls(1)
         tempo.update(**dictionary)
         return (tempo)
@@ -114,12 +115,12 @@ class Base:
                 return ([cls.create(**objt) for objt in lst])
         except FileNotFoundError:
             return ([])
-
+    """
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """
+        
         creates square and rectangle
-        """
+        
 
         ink = ('orange', 'yellow', 'red', 'purple', 'blue', 'green')
 
@@ -152,3 +153,4 @@ class Base:
                 drawing.forward(s.size)
                 drawing.left(90)
                 total += 1
+    """
