@@ -3,6 +3,9 @@
 just module documentation
 """
 import json
+import csv
+import turtle
+from random import choice as random
 
 
 class Base:
@@ -73,3 +76,79 @@ class Base:
         except:
             pass
         return (lst)
+    
+     @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        This function serializes in csv
+        """
+        fn = cls.__name__ + ".csv"
+        if fn == "Rectangle.csv":
+            fields = ["id", "width", "height", "x", "y"]
+        else:
+            fields = ["id", "size", "x", "y"]
+        with open(fn, mode="w", newline="") as myFile:
+            if list_objs is None:
+                writer = csv.writer(myFile)
+                writer.writerow([[]])
+            else:
+                writer = csv.DictWriter(myFile, fieldnames=fields)
+                writer.writeheader()
+                for x in list_objs:
+                    writer.writerow(x.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        This function deserializes from csv
+        """
+        try:
+            fn = cls.__name__ + ".csv"
+            with open(fn, newline="") as myFile:
+                reader = csv.DictReader(myFile)
+                lst = []
+                for x in reader:
+                    for i, n in x.items():
+                        x[i] = int(n)
+                    lst.append(x)
+                return ([cls.create(**objt) for objt in lst])
+        except FileNotFoundError:
+            return ([])
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Turtle creates square and rectangle
+        """
+
+        ink = ('black', 'orange', 'yellow', 'red', 'purple', 'blue', 'green', 'violet')
+
+        for r in list_rectangles:
+            drawing = turtle.Pen(visible=False)
+            drawing.pencolor(random(ink))
+            drawing.penup()
+            drawing.pensize(2)
+            drawing.setx(r.x)
+            drawing.sety(r.y)
+            drawing.pendown()
+            drawing.forward(r.width)
+            drawing.left(90)
+            drawing.forward(r.height)
+            drawing.left(90)
+            drawing.forward(r.width)
+            drawing.left(90)
+            drawing.forward(r.height)
+            drawing.left(90)
+
+        for s in list_squares:
+            drawing = turtle.Pen(visible=False)
+            drawing.pencolor(random(ink))
+            drawing.penup()
+            drawing.setx(s.x)
+            drawing.sety(s.y)
+            drawing.pendown()
+            total = 0
+            while total < 5:
+                drawing.forward(s.size)
+                drawing.left(90)
+                total += 1
