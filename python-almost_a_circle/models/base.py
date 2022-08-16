@@ -76,7 +76,7 @@ class Base:
         except:
             pass
         return (lst)
-    
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """
@@ -121,7 +121,7 @@ class Base:
         creates square and rectangle
         """
 
-        ink = ('black', 'orange', 'yellow', 'red', 'purple', 'blue', 'green', 'violet')
+        ink = ('orange', 'yellow', 'red', 'purple', 'blue', 'green')
 
         for r in list_rectangles:
             drawing = turtle.Pen(visible=False)
