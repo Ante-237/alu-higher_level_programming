@@ -110,7 +110,6 @@ class Rectangle(Base):
                 else:
                     setattr(self, key, value)
 
-    
     def to_dictionary(self):
         """just dictionary
         representation
