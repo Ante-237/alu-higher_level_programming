@@ -4,6 +4,7 @@ just module documentation
 """
 import json
 
+
 class Base:
     """ this is a base class
     that keeps track of ids"""
