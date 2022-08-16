@@ -27,6 +27,7 @@ class Base:
             list_dictionaries = []
         return (json.dumps(list_dictionaries))
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """ writing to file
         """
