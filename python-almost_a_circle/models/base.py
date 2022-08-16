@@ -77,10 +77,10 @@ class Base:
             pass
         return (lst)
     
-     @classmethod
+    @classmethod
     def save_to_file_csv(cls, list_objs):
         """
-        This function serializes in csv
+        function serializes in csv
         """
         fn = cls.__name__ + ".csv"
         if fn == "Rectangle.csv":
@@ -100,7 +100,7 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """
-        This function deserializes from csv
+        function deserializes from csv
         """
         try:
             fn = cls.__name__ + ".csv"
@@ -118,7 +118,7 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         """
-        Turtle creates square and rectangle
+        creates square and rectangle
         """
 
         ink = ('black', 'orange', 'yellow', 'red', 'purple', 'blue', 'green', 'violet')
