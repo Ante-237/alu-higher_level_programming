@@ -9,7 +9,7 @@ class Square(Rectangle):
         """just using the super class"""
         super().__init__(size, size, x, y, id)
 
-    def __str__(self):
+    def __str__(self,t=""):
         """ just string form """
         d = self.id
         a = Rectangle.__width
