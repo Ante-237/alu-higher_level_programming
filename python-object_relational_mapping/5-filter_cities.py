@@ -19,8 +19,8 @@ if __name__ == "__main__":
     # with csv formating style
     cities = []
     for i in result:
-         if i[3] == argv[4]:
-             cities.append(i[2])
+        if i[2] == argv[4]:
+            cities.append(i[2])
     print(', '.join(cities))
     # close cursor and db
     cur.close()
