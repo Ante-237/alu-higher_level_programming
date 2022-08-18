@@ -17,14 +17,10 @@ if __name__ == "__main__":
     # check if cities pass
     # the argument check and add to list
     # with csv formating style
-    check = (argv[4],)
     cities = []
     for i in result:
-        print(i)
-        print(type(i))
-        if check[0] is not None:
-            if i[4] == check[0]:
-                cities.append(i[2])
+         if i[3] == argv[4]:
+             cities.append(i[2])
     print(', '.join(cities))
     # close cursor and db
     cur.close()
