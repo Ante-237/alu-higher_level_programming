@@ -21,7 +21,7 @@ if __name__ == "__main__":
     for i in result:
         print(i)
         if i[2] == argv[4]:
-            cities.append(i[2])
+            cities.append(i[1])
     print(', '.join(cities))
     # close cursor and db
     cur.close()
