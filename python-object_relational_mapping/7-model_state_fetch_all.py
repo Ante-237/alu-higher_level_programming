@@ -11,14 +11,10 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysldb://{}:{}@localhost/{}'.
     format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
     # create session to interact with engine and run queries
-    Session = sessionmaker(bind=engine)
-    Session.configure(bind=engine)
-    session = Session()
     # handle engine creation from base
     Base.metadata.create_all(engine)
-    for i in session.query(State).order_by(State.id):
-        print(i)
-        print(type(i))
+    session = Sessionmaker(bind=engine)
+
+    lst = session.query(State).order_by(State.id)
+    for i in lst:
         print("{}: {}".format(i.id, i.name))
-    # close the session
-    session.close()
