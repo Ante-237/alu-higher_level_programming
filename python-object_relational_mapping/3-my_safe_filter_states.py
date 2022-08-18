@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # vert input from users
     # use string formating to be specific
     cur.execute("SELECT * FROM states WHERE states.name = %s\
-    ORDER BY states.id ASC",(argv[4],))
+    ORDER BY states.id ASC", (argv[4],))
     result = cur.fetchall()
     # check if second argument of tuple
     # is same as the passed argument
