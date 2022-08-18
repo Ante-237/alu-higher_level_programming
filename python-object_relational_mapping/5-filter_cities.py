@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # with csv formating style
     check = (argv[4],)
     print(type(check))
-    print(checK)
+    print(check)
     cities = []
     for i in result:
         if i[4] == argv[4]:
