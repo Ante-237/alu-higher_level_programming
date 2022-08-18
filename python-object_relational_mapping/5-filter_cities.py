@@ -19,7 +19,6 @@ if __name__ == "__main__":
     # with csv formating style
     cities = []
     for i in result:
-        print(i)
         if i[2] == argv[4]:
             cities.append(i[1])
     print(', '.join(cities))
