@@ -18,11 +18,9 @@ if __name__ == "__main__":
     # the argument check and add to list
     # with csv formating style
     check = (argv[4],)
-    print(type(check))
-    print(check)
     cities = []
     for i in result:
-        if i[4] == argv[4]:
+        if i[4] == check[0]:
             cities.append(i[2])
     print(', '.join(cities))
     # close cursor and db
