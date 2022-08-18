@@ -9,8 +9,7 @@ if __name__ == "__main__":
 
     # create engine that binds to local port sql
     engine = create_engine('mysql+mysldb://{}:{}@localhost/{}'.
-                            format(argv[1], argv[2], argv[3]),
-                            pool_pre_ping=True)
+    format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
     # create session to interact with engine and run queries
     session = sessionmaker(bind=engine)
     # handle engine creation from base
