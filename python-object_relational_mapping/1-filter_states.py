@@ -11,8 +11,8 @@ if __name__ == "__main__":
     cur.execute("""SELECT * FROM states ORDER BY states.id ASC""")
     result = cur.fetchall()
     # display just last two
-    print(result[3])
-    print(result[4])
+    print(result)
+    print(type(result))
     # close cursor and db
     cur.close()
     db.close()
