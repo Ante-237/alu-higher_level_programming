@@ -14,7 +14,7 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)
     # handle engine creation from base
     Base.metadata.create_all(engine)
-    for i in session().query(State).order_by(State.id):
+    for i in session.query(State).order_by(State.id):
         print("{}: {}".format(i.id, i.name))
     # close the session
-    session().close()
+    session.close()
