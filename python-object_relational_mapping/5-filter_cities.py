@@ -20,6 +20,8 @@ if __name__ == "__main__":
     check = (argv[4],)
     cities = []
     for i in result:
+        print(i)
+        print(type(i))
         if check[0] is not None:
             if i[4] == check[0]:
                 cities.append(i[2])
