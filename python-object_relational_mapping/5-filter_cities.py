@@ -20,8 +20,9 @@ if __name__ == "__main__":
     check = (argv[4],)
     cities = []
     for i in result:
-        if i[4] == check[0]:
-            cities.append(i[2])
+        if check[0] is not None:
+            if i[4] == check[0]:
+                cities.append(i[2])
     print(', '.join(cities))
     # close cursor and db
     cur.close()
