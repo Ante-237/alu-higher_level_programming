@@ -13,8 +13,8 @@ if __name__ == "__main__":
     # display elements with N
     # only by taking comparing their first letter in tuple
     for i in result:
-        if r[1][0] == 'N':
-            print(r)
+        if i[1][0] == 'N':
+            print(i)
     # close cursor and db
     cur.close()
     db.close()
