@@ -1,22 +1,27 @@
 #!/usr/bin/python3
 """ module gets all states """
 
+import sys
+from sqlalchemy import (create_engine)
+from sqlalchemy.orm import Session
+from sqlalchemy.engine.url import URL
+from model_state import Base, State
+
+
 if __name__ == "__main__":
-    from model_state import Base, State
-    from sqlalchemy import create_engine
-    from sqlalchemy.orm import sessionmaker
-    from sys import argv
+    mySQL_u = sys.argv[1]
+    mySQL_p = sys.argv[2]
+    db_name = sys.argv[3]
 
-    # create engine that binds to local port sql
-    engine = create_engine('mysql+mysldb://{}:{}@localhost/{}'.
-    format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
-    # create session to interact with engine and run queries
-    # handle engine creation from base
+    url = {'drivername': 'mysql+mysqldb', 'host': 'localhost',
+           'username': mySQL_u, 'password': mySQL_p, 'database': db_name}
+
+    engine = create_engine(URL(**url), pool_pre_ping=True)
     Base.metadata.create_all(engine)
-    session = Sessionmaker(bind=engine)
 
-    lst = session.query(State).order_by(State.id)
-    print(lst)
-    print(type(lst))
-    for i in lst:
-        print("{}: {}".format(i.id, i.name))
+    session = Session(bind=engine)
+
+    q = session.query(State).order_by(State.id)
+
+    for instance in q:
+        print("{}: {}".format(instance.id, instance.name))
