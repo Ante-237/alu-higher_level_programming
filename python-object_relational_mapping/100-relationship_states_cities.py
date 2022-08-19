@@ -1,28 +1,28 @@
 #!/usr/bin/python3
-""" city relationship  module"""
-import sys
-from sqlalchemy import (create_engine)
-from sqlalchemy.orm import Session
-from sqlalchemy.engine.url import URL
+"""Start link class to table in database
+"""
+from sys import argv
 from relationship_state import Base, State
 from relationship_city import City
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+
+def relationship_state():
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
+                           format(argv[1],
+                                  argv[2],
+                                  argv[3]),
+                           pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+    session = sessionmaker(bind=engine)()
+    c = City(name='San Francisco')
+    s = State(name='California', cities=[c])
+    session.add(s)
+    session.add(c)
+    session.commit()
+    session.close()
 
 
 if __name__ == "__main__":
-    mySQL_u = sys.argv[1]
-    mySQL_p = sys.argv[2]
-    db_name = sys.argv[3]
-
-    url = {'drivername': 'mysql+mysqldb', 'host': 'localhost',
-           'username': mySQL_u, 'password': mySQL_p, 'database': db_name}
-
-    engine = create_engine(URL(**url), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
-
-    session = Session(bind=engine)
-
-    newState = State(name="California")
-    newState.cities.append(City(name="San Francisco"))
-
-    session.add(newState)
-    session.commit()
+    relationship_state()
