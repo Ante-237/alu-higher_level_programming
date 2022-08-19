@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-""" module from city """
+""" module from city 
+list city objects form database
+Got three main arguments
+"""
+
+
 import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import Session
