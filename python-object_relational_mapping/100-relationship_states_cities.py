@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-""" city relationship """
-
-
+""" city relationship  module"""
 import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import Session
