@@ -1,34 +1,26 @@
 #!/usr/bin/python3
-"""
-Script that lists all `City` objects from the database `hbtn_0e_101_usa`.
-Arguments:
-    mysql username (str)
-    mysql password (str)
-    database name (str)
-"""
+'''List all State objects from the db hbtn_0e_6_usa'''
 
-import sys
-from sqlalchemy import (create_engine)
-from sqlalchemy.orm import Session
-from sqlalchemy.engine.url import URL
+from sys import argv
 from relationship_state import Base, State
 from relationship_city import City
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+
+def relationship_state_cities_state():
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
+                           format(argv[1],
+                                  argv[2],
+                                  argv[3]),
+                           pool_pre_ping=True)
+    session = sessionmaker(bind=engine)()
+    result = session.query(State).all()
+    for row in result:
+        for city in row.cities:
+            print(str(city.id) + ": " + city.name + " -> " + row.name)
+    session.close()
 
 
 if __name__ == "__main__":
-    mySQL_u = sys.argv[1]
-    mySQL_p = sys.argv[2]
-    db_name = sys.argv[3]
-
-    url = {'drivername': 'mysql+mysqldb', 'host': 'localhost',
-           'username': mySQL_u, 'password': mySQL_p, 'database': db_name}
-
-    engine = create_engine(URL(**url), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
-
-    session = Session(bind=engine)
-
-    cities = session.query(City)
-
-    for city in cities:
-        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
+    relationship_state_cities_state()
