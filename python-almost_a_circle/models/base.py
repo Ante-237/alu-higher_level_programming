@@ -118,9 +118,8 @@ class Base:
     """
     @staticmethod
     def draw(list_rectangles, list_squares):
-        
+
         creates square and rectangle
-        
 
         ink = ('orange', 'yellow', 'red', 'purple', 'blue', 'green')
 
