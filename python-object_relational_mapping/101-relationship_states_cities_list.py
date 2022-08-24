@@ -1,31 +1,27 @@
 #!/usr/bin/python3
-""" module to list relationship """
-
-
-import sys
-from sqlalchemy import (create_engine)
-from sqlalchemy.orm import Session
-from sqlalchemy.engine.url import URL
+"""
+All states via SQLAlchemy
+"""
+from sys import argv
 from relationship_state import Base, State
 from relationship_city import City
-
+from sqlalchemy import (create_engine)
+from sqlalchemy.orm import Session
 
 if __name__ == "__main__":
-    mySQL_u = sys.argv[1]
-    mySQL_p = sys.argv[2]
-    db_name = sys.argv[3]
-
-    url = {'drivername': 'mysql+mysqldb', 'host': 'localhost',
-           'username': mySQL_u, 'password': mySQL_p, 'database': db_name}
-
-    engine = create_engine(URL(**url), pool_pre_ping=True)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
+                           format(argv[1], argv[2], argv[3]),
+                           pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
-    session = Session(bind=engine)
+    session = Session(engine)
 
-    states = session.query(State)
+    data = session.query(State).order_by(State.id).all()
 
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
-        for city in state.cities:
-            print("\t{}: {}".format(city.id, city.name))
+    for row in data:
+        print("{}: {}".format(row.id, row.name))
+        for city in row.cities:
+            print("    {}: {}".format(city.id, city.name))
+
+    session.commit()
+    session.close()
