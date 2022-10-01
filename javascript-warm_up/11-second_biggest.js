@@ -12,6 +12,9 @@ if (args.length <= 3) {
       secondlargest = bigSoFar;
       bigSoFar = Number(args[i]);
     }
+    if (Number(args[i]) > secondlargest && Number(args[i]) < bigSoFar){
+      secondlargest = Number(args[i]);
+    }
   }
   console.log(secondlargest);
 }
