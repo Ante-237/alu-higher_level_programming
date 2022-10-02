@@ -5,10 +5,7 @@ const myObject = {
 };
 console.log(myObject);
 
-const incr = function (x) {
-  x = x + 1;
-};
-myObject.push(incr);
+myObject.prototype.incr = function () { myObject.value = myObject.value + 1; };
 
 myObject.incr();
 console.log(myObject);
