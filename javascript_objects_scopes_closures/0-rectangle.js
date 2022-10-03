@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let Rectangle = class {
+exports.Rectangle = class {
   constructor () {
   }
 }
