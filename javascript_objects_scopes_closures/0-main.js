@@ -1,4 +1,5 @@
 #!/usr/bin/node
-const nb = require('./8-esrever').esrever;
-
-console.log(nb([1, 2, 3, 5, 6]));
+const nb = require('./9-logme').logMe;
+nb('Hello');
+nb('BEst');
+nb('School');
