@@ -20,4 +20,9 @@ module.exports = class Square extends square {
       }
     }
   }
+
+  double () {
+    super.double();
+    this.size *= 2;
+  }
 };
