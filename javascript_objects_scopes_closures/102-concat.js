@@ -4,19 +4,8 @@ const pathA = args[2];
 const pathB = args[3];
 const pathC = args[4];
 
-const fs = require('fs').promises;
+const fs = require('fs');
 
-async function readFile (filePath) {
-  try {
-    const data = await fs.readFile(filePath);
-    return (data.toString());
-  } catch (error) {
-    console.error(`Got an error trying to read the file: ${error.message}`);
-  }
-}
-
-const dataOne = readFile(pathA);
-const dataTwo = readFile(pathB);
-const output = dataOne + dataTwo;
-console.log(output);
-console.log(pathC);
+const dataA = fs.readFileSync(pathA, 'utf8');
+const dataB = fs.readFileSync(pathB, 'utf8');
+fs.writeFileSync(pathC, dataA + dataB);
