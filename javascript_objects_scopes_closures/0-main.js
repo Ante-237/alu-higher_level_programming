@@ -1,10 +1,8 @@
 #!/usr/bin/node
-const Square = require('./5-square');
+const Square = require('./6-square');
 
-const r1 = new Square(5, 5);
-console.log(r1);
-r1.print();
-r1.double();
-r1.print();
+const r1 = new Square(5);
+r1.charPrint();
+r1.charPrint('C');
 console.log(r1.width);
 console.log(r1.height);
