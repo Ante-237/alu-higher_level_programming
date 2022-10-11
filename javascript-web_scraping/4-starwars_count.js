@@ -8,7 +8,6 @@ request(process.argv[2], function (error, response, body) {
     const data = JSON.parse(body);
     const movieCount = data.results.length;
     let finalResult = 0;
-    console.log(movieCount);
     // const comString = 'https://swapi-api.hbtn.io/api/people/18/';
     for (let i = 0; i < movieCount; i++) {
       const numChars = data.results[i].characters.length;
