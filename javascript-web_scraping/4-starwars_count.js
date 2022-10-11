@@ -13,7 +13,7 @@ request(process.argv[2], function (error, response, body) {
       const numChars = data.results[i].characters.length;
       for (let j = 0; j < numChars; j++) {
         const comString0 = data.results[i].characters[j];
-        if (comString0.slice(-3, -1) === '18') {
+        if (comString0.slice(-4, -1) === '/18') {
           finalResult += 1;
         }
       }
